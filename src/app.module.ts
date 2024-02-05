@@ -8,8 +8,12 @@ import { UploadModule } from './server/upload/upload.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/user'), UserModule, UploadModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/user'),
+    UserModule,
+    UploadModule,
+  ],
   controllers: [AppController, UploadController],
   providers: [AppService, UploadService],
 })
-export class AppModule { }
+export class AppModule {}
