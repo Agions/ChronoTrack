@@ -3,19 +3,18 @@ import { UserService } from './user.service';
 import { CreateUserDto } from './create-user.dto';
 import { User } from './user.schema';
 
-
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly userService: UserService) {}
   @Post()
   async create(@Body() createUserDto: CreateUserDto) {
     await this.userService.create(createUserDto);
     return {
       data: {
         code: 1,
-        message: '新增成功'
-      }
-    }
+        message: '新增成功',
+      },
+    };
   }
 
   @Get()
@@ -32,5 +31,4 @@ export class UserController {
   async delete(@Param('id') id: string) {
     return this.userService.delete(id);
   }
-
 }
