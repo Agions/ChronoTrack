@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoTrack - 智能工时与薪资管理系统</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --dark-bg: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .features {
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .tech-stack {
+            background-color: var(--light-bg);
+        }
+        
+        .stack-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .stack-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 180px;
+        }
+        
+        .stack-item h3 {
+            margin-top: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .cta {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta .btn {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .cta .btn:hover {
+            background-color: #f4f4f4;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-top: 20px;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ChronoTrack</h1>
+            <p>智能工时与薪资管理系统，帮助企业高效管理员工考勤、工时记录和薪资计算。</p>
+            <a href="https://github.com/Agions/ChronoTrack" class="btn">查看GitHub</a>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>系统特点</h2>
+                <p>ChronoTrack提供全面的工时与薪资管理功能，满足各类企业需求</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>智能考勤管理</h3>
+                    <p>支持地理位置验证、人脸识别和指纹打卡，确保考勤记录真实可靠。</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>灵活的工时记录</h3>
+                    <p>支持多种工作模式，包括固定工时、弹性工作制和远程办公。</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>精准薪资计算</h3>
+                    <p>自动计算基本工资、加班费、奖金和扣除项，确保薪资准确无误。</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>强大的数据分析</h3>
+                    <p>提供多维度的统计报表，帮助管理者做出明智决策。</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>安全可靠</h3>
+                    <p>采用JWT认证机制，确保数据安全性。</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>易于集成</h3>
+                    <p>提供标准REST API，方便与其他系统集成。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-title">
+                <h2>技术栈</h2>
+                <p>ChronoTrack基于现代化技术栈开发</p>
+            </div>
+            
+            <div class="stack-list">
+                <div class="stack-item">
+                    <h3>NestJS</h3>
+                    <p>后端框架</p>
+                </div>
+                
+                <div class="stack-item">
+                    <h3>TypeScript</h3>
+                    <p>开发语言</p>
+                </div>
+                
+                <div class="stack-item">
+                    <h3>MongoDB</h3>
+                    <p>数据库</p>
+                </div>
+                
+                <div class="stack-item">
+                    <h3>JWT</h3>
+                    <p>认证机制</p>
+                </div>
+                
+                <div class="stack-item">
+                    <h3>Swagger</h3>
+                    <p>API文档</p>
+                </div>
+                
+                <div class="stack-item">
+                    <h3>Docker</h3>
+                    <p>容器化部署</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>开始使用 ChronoTrack</h2>
+            <p>立即访问GitHub仓库，体验智能工时与薪资管理系统。</p>
+            <a href="https://github.com/Agions/ChronoTrack" class="btn">查看文档</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h3>ChronoTrack</h3>
+            <p>智能工时与薪资管理系统</p>
+            <p>&copy; 2024 <a href="https://github.com/Agions">Agions</a> | <a href="https://github.com/Agions/ChronoTrack/blob/main/LICENSE">MIT License</a></p>
+        </div>
+    </footer>
+</body>
+</html> 
