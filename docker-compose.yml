@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment:
+      - DATABASE_URI=mongodb://mongodb:27017/chronotrack
+      - JWT_SECRET=your_jwt_secret_key_change_in_production
+      - JWT_EXPIRES_IN=1d
+      - UPLOAD_DEST=./uploads
+    volumes:
+      - ./uploads:/usr/src/app/uploads
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongodb_data: 
